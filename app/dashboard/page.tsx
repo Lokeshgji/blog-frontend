@@ -212,6 +212,7 @@ Your Articles
 )}
 
 {articles.map((article:any)=>(
+
 <div
 key={article.id}
 className="border border-gray-700 p-4 mb-4 rounded"
@@ -219,14 +220,26 @@ className="border border-gray-700 p-4 mb-4 rounded"
 
 <h3 className="text-xl">{article.title}</h3>
 
+<div className="flex gap-4 mt-3">
+
+<button
+onClick={()=>router.push(`/edit/${article.id}`)}
+className="text-blue-400"
+>
+Edit
+</button>
+
 <button
 onClick={()=>deleteArticle(article.id)}
-className="text-red-500 mt-2"
+className="text-red-500"
 >
 Delete
 </button>
 
 </div>
+
+</div>
+
 ))}
 
 <button
