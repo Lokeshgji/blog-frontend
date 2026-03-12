@@ -41,7 +41,7 @@ const fetchArticles = async () => {
 
 try{
 
-const res = await axios.get("http://localhost:8080/articles")
+const res = await axios.get("https://blog-backend-j5th.onrender.com/articles")
 
 setArticles(res.data || [])
 
@@ -76,7 +76,7 @@ const slug = createSlug(title)
 const token = localStorage.getItem("token")
 
 await axios.post(
-  "http://localhost:8080/articles",
+  "https://blog-backend-j5th.onrender.com/articles",
   {
     title,
     content,

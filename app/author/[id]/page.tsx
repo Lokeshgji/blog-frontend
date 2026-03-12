@@ -35,13 +35,13 @@ const fetchData = async () => {
 try{
 
 const authorRes = await axios.get(
-`http://localhost:8080/authors/${id}`
+`https://blog-backend-j5th.onrender.com/authors/${id}`
 )
 
 setAuthor(authorRes.data)
 
 const articleRes = await axios.get(
-`http://localhost:8080/authors/${id}/articles`
+`https://blog-backend-j5th.onrender.com/authors/${id}/articles`
 )
 
 setArticles(articleRes.data || [])

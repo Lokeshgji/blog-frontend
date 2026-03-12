@@ -16,7 +16,7 @@ const login = async () => {
 try{
 
 const res = await axios.post(
-"http://localhost:8080/login",
+"https://blog-backend-j5th.onrender.com/login",
 {email,password}
 )
 

@@ -16,7 +16,7 @@ const [article,setArticle] = useState<any>(null)
 
 useEffect(()=>{
 
-axios.get(`http://localhost:8080/articles/${slug}`)
+axios.get(`https://blog-backend-j5th.onrender.com/articles/${slug}`)
 .then(res=>{
 setArticle(res.data)
 })
